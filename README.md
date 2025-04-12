@@ -9,23 +9,23 @@
 6. Stop the Program
 ## PROGRAM
    Client:
-     import socket
-     s=socket.socket()
-     s.bind(("localhost",9000))
-     s.listen(5)
-     c,addr=s.accept()
-     size=int(input("Enter the number of frames to send :"))
-     l=list(range(size))
-     s=int(input("Enter the Window Size : "))
-     st=0
-     i=0
-     while (i<len(l)):
-         st+=s
-         c.send(str(l[i:st]).encode())
-        ack=c.recv(1024).decode()
-        if ack:
-           print(ack)
-           i+=s
+           import socket
+           s=socket.socket()
+           s.bind(("localhost",9000))
+           s.listen(5)
+           c,addr=s.accept()
+           size=int(input("Enter the number of frames to send :"))
+           l=list(range(size))
+           s=int(input("Enter the Window Size : "))
+           st=0
+           i=0
+           while (i<len(l)):
+                st+=s
+                c.send(str(l[i:st]).encode())
+                ack=c.recv(1024).decode()
+                if ack:
+                 print(ack)
+                 i+=s
 
 
         Server:
