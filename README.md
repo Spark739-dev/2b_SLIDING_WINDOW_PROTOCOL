@@ -1,6 +1,6 @@
 # 2b IMPLEMENTATION OF SLIDING WINDOW PROTOCOL
 ## AIM
-  To implement the Sloding Window Protocol.
+  To implement the Sliding Window Protocol.
 ## ALGORITHM:
 1. Start the program.
 2. Get the frame size from the user
